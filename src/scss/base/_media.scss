@@ -1,0 +1,39 @@
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+    .header {
+        &__logo {
+            max-width: 200px;
+            img {
+                width: 97%;
+            }
+        }
+    }
+
+    .promo {
+        &__wrapper {
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        &__logo {
+            max-width: 200px;
+            img {
+                width: 92%;
+            }
+        }
+    }
+
+    .promo {
+        &__wrapper {
+            align-items: center;
+        }
+    }
+}

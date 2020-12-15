@@ -1,0 +1,36 @@
+.benefits {
+    background-color: #f6f6f6;
+}
+.benefits__text {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0d0d0d;
+    text-align: center;
+    padding-top: 70px;
+}
+.benefits__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 65px;
+}
+
+.benefits__clue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header {
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #0d0d0d;
+        margin-top: 38px;
+    }
+    &__text {
+        text-align: center;
+        max-width: 245px;
+        margin-top: 26px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #0d0d0d;
+    }
+}
