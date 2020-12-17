@@ -37,3 +37,20 @@
         }
     }
 }
+
+@media screen and (max-width: 435px) {
+    .header {
+        flex-direction: column;
+        &__official {
+            margin: 10px 10px;
+        }
+    }
+    .promo {
+        &__icons {
+            max-width: 345px;
+        }
+    }
+    .benefits__wrapper {
+        flex-direction: column;
+    }
+}
