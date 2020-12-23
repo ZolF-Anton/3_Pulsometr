@@ -19,6 +19,15 @@
             align-items: center;
         }
     }
+    .benefits {
+        padding: 50px 50px;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__clue {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -33,7 +42,17 @@
 
     .promo {
         &__wrapper {
-            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .benefits__wrapper {
+        flex-direction: column;
+    }
+    .consultation {
+        padding: 50px 30px;
+        .title_left {
+            font-size: 30px;
         }
     }
 }
