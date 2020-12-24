@@ -6,7 +6,8 @@
 @import 'blocks/consultation';
 @import 'blocks/titles';
 @import 'blocks/forms';
-// There is @media must be the last
+@import 'blocks/carousel';
+// *********************************************There is @media must be the last
 @import 'base/media';
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
