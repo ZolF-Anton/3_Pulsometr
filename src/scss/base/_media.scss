@@ -55,6 +55,24 @@
             font-size: 30px;
         }
     }
+
+    .catalog {
+        &__tab {
+            font-size: 14px;
+        }
+    }
+    .feedback {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        &__photo {
+            margin-top: 30px;
+        }
+        &__data {
+            margin-top: 10px;
+        }
+    }
 }
 
 @media screen and (max-width: 435px) {
@@ -71,5 +89,17 @@
     }
     .benefits__wrapper {
         flex-direction: column;
+    }
+    .catalog {
+        &__tab {
+            font-size: 11px;
+        }
+    }
+
+    .footer {
+        &__info {
+            width: 378px;
+            padding-top: 19px;
+        }
     }
 }

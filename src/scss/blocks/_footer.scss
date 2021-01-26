@@ -1,0 +1,52 @@
+.footer {
+    height: 630px;
+    position: relative;
+    &__map {
+        max-height: 95vh;
+        overflow: hidden;
+    }
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 270px;
+        background-color: $main-color;
+        padding: 50px 68px 60px 68px;
+    }
+    &__addr {
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+    &__phone {
+        font-weight: 700;
+        font-size: 20px;
+        color: #ffffff;
+        margin-bottom: 38px;
+        display: flex;
+        justify-content: center;
+        &:hover {
+            color: rgb(235, 208, 208);
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__soc-item {
+        img {
+            border-radius: 68px;
+            box-shadow: 2px 3px 7px 1px rgba(0, 0, 0, 0.5);
+            &:hover {
+                height: 57px;
+                //border: 2px solid #ffffff;
+                border-radius: 68px;
+                box-shadow: 9px 10px 5px 1px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+}
