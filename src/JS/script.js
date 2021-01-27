@@ -2,10 +2,7 @@ $(document).ready(function () {
     $('.carousel__inner').slick({
         infinite: true,
         speed: 500,
-        adaptiveHeight: false,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        //mobileFirst: true,
+
         prevArrow:
             '<button type="button" class="slick-prev"><img src="icon/red/chevron_left_solid.png" /></button>',
         nextArrow:
@@ -22,8 +19,6 @@ $(document).ready(function () {
                     dots: false,
                     swipeToSlide: true,
                     arrows: false,
-                    ///////
-                    adaptiveHeight: true,
                 },
             },
         ],
@@ -52,4 +47,20 @@ $(document).ready(function () {
     }
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+    //Modal Window
+
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').fadeIn('fast');
+    });
+    $('.modal__close').on('click', function () {
+        $('.overlay, #consultation, #tnx, #order').fadeOut('slow');
+    });
+    $('.button_mini').on('click', function () {
+        $('.overlay, #order').fadeIn('fast');
+    });
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr');
+        });
+    });
 });
