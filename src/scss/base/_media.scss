@@ -73,33 +73,39 @@
             margin-top: 10px;
         }
     }
-}
-
-@media screen and (max-width: 435px) {
-    .header {
-        flex-direction: column;
-        &__official {
-            margin: 10px 10px;
-        }
-    }
-    .promo {
-        &__icons {
-            max-width: 345px;
-        }
-    }
-    .benefits__wrapper {
-        flex-direction: column;
-    }
-    .catalog {
-        &__tab {
-            font-size: 11px;
+    .overlay {
+        .modal {
+            width: 338px;
+            padding: 20px;
         }
     }
 
-    .footer {
-        &__info {
-            width: 378px;
-            padding-top: 19px;
+    @media screen and (max-width: 435px) {
+        .header {
+            flex-direction: column;
+            &__official {
+                margin: 10px 10px;
+            }
+        }
+        .promo {
+            &__icons {
+                max-width: 345px;
+            }
+        }
+        .benefits__wrapper {
+            flex-direction: column;
+        }
+        .catalog {
+            &__tab {
+                font-size: 11px;
+            }
+        }
+
+        .footer {
+            &__info {
+                width: 378px;
+                padding-top: 19px;
+            }
         }
     }
 }

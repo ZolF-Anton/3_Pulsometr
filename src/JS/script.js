@@ -35,7 +35,7 @@ $(document).ready(function () {
             .eq($(this).index())
             .addClass('catalog__content_active');
     });
-
+    // Переключение табов
     function toggleSlide(item) {
         $(item).each(function (i) {
             $(this).on('click', function (e) {
@@ -53,14 +53,14 @@ $(document).ready(function () {
         $('.overlay, #consultation').fadeIn('fast');
     });
     $('.modal__close').on('click', function () {
-        $('.overlay, #consultation, #tnx, #order').fadeOut('slow');
+        $('.overlay, #consultation, #tnx, #order').fadeOut('slow'); // закрывает модальное окно
     });
-    $('.button_mini').on('click', function () {
-        $('.overlay, #order').fadeIn('fast');
-    });
+    //$('.button_mini').on('click', function () {
+    //$('.overlay, #order').fadeIn('fast');  }); // показывает модально окно
     $('.button_mini').each(function (i) {
         $(this).on('click', function () {
-            $('#order .modal__descr');
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); //Вытаскиваем текст из карточки товара и помещаем его в модальное окно.
+            $('.overlay, #order').fadeIn('fast');
         });
     });
 });
