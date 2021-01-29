@@ -12,9 +12,8 @@
         width: 220px;
         height: 50px;
         border: 2px solid #d0d0d0;
-        margin: 0 5px;
+
         font-size: 18px;
-        line-height: 1.2;
         font-weight: 500;
         text-transform: uppercase;
         color: #6b6b6b;
@@ -23,12 +22,15 @@
         transform: skewX(-30deg);
         cursor: pointer;
         transition: 0.7s all;
+        &_midle {
+            margin: 0 10px;
+        }
 
         .reset_div {
             transform: skewX(30deg);
         }
         &:hover {
-            box-shadow: 3px 3px 20px $main-color;
+            box-shadow: 3px 3px 10px $main-color;
             background-color: $main-colori;
             border: none;
         }
