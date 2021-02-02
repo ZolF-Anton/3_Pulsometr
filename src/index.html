@@ -5,18 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="rgb(76, 155, 3)" />
         <title>RunSmart!</title>
-
+        <!-- Тест фавикона -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/src/icon/SOCIAL/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/src/icon/SOCIAL/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/src/icon/SOCIAL/favicon-16x16.png" />
+        <link rel="icon" type="image/svg+xml" href="/src/icon/SOCIAL/safari-pinned-tab.svg" />
+        <link rel="manifest" href="/src/icon/SOCIAL/site.webmanifest" />
+        <link rel="mask-icon" href="/src/icon/SOCIAL/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="shortcut icon" href="/src/icon/SOCIAL/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="msapplication-config" content="/src/icon/SOCIAL/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- End -->
         <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
         <link rel="stylesheet" href="css/font.css" />
         <link rel="stylesheet" type="text/css" href="css/slick.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
-        />
 
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
+        <div class="Banner_banner__3Vw6d">
+            <div class="Banner_marquee__1qRNm">
+                <div class="Banner_title__1b7tA">
+                    Ахой! Покупайте пульсометры! Они помогут вам достич высоких результатов и
+                    сохранят здоровье!
+                </div>
+            </div>
+        </div>
         <section class="promo">
             <div class="container">
                 <header class="header">
@@ -104,10 +119,10 @@
                     Просто заполните форму заявки <br />
                     и мы перезвоним вам в течении 10 минут
                 </div>
-                <form class="feed-form" action="#">
-                    <input name="name" required placeholder="Ваше имя" type="text" />
+                <form id="first-form" class="feed-form" action="#">
+                    <input name="name" minlength="1" placeholder="Ваше имя" type="text" />
                     <input name="phone" placeholder="Ваш телефон" type="number" />
-                    <input name="email" required placeholder="Ваш E-mail" type="email" />
+                    <input name="email" placeholder="Ваш E-mail" type="email" />
                     <button class="button button_submit">заказать консультацию</button>
                 </form>
             </div>
@@ -630,9 +645,9 @@
                 <div class="modal__subtitle">Просто заполните форму</div>
                 <div class="modal__descr">и мы вам перезвоним в течении 10 минут</div>
                 <form class="feed-form feed-form_mt25" action="#">
-                    <input name="name" required placeholder="Ваше имя" type="text" />
+                    <input name="name" placeholder="Ваше имя" type="text" />
                     <input name="phone" placeholder="Ваш телефон" type="number" />
-                    <input name="email" required placeholder="Ваш E-mail" type="email" />
+                    <input name="email" placeholder="Ваш E-mail" type="email" />
                     <button class="button button_submit">заказать консультацию</button>
                 </form>
             </div>
@@ -642,9 +657,9 @@
                 <div class="modal__subtitle">Ваш заказ:</div>
                 <div class="modal__descr">Пульсометр Polar FT1</div>
                 <form class="feed-form feed-form_mt25" action="#">
-                    <input name="name" required placeholder="Ваше имя" type="text" />
+                    <input name="name" placeholder="Ваше имя" type="text" />
                     <input name="phone" placeholder="Ваш телефон" type="number" />
-                    <input name="email" required placeholder="Ваш E-mail" type="email" />
+                    <input name="email" placeholder="Ваш E-mail" type="email" />
                     <button class="button button_submit">КУПИТЬ</button>
                 </form>
             </div>
@@ -656,9 +671,10 @@
             </div>
         </div>
 
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
         <script src="js/slick.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
