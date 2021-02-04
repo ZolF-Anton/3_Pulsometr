@@ -1,3 +1,4 @@
+////////////////////////JQ   Kingdom////////////////////
 $(document).ready(function () {
     $('.carousel__inner').slick({
         infinite: true,
@@ -88,3 +89,47 @@ $(document).ready(function () {
     valideForms('#consultation form');
     valideForms('#order form');
 });
+
+/////////////Clear JS Phone mask
+
+//////////////////////////////////////////////////////////////////
+function phoneMaskValid(inputForms) {
+    let phoneInput = document.querySelector(inputForms);
+    phoneInput.addEventListener('keydown', function (event) {
+        if (
+            !(
+                event.key == 'ArrowLeft' ||
+                event.key == 'ArrowRight' ||
+                event.key == 'Backspace' ||
+                event.key == 'Tab'
+            )
+        ) {
+            event.preventDefault();
+        }
+        let mask = '+7 (111) 111-11-11'; // Задаем маску
+
+        if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+            // Здесь начинаем сравнивать this.value и mask
+            // к примеру опять же
+            let currentString = this.value;
+            let currentLength = currentString.length;
+            if (/[0-9]/.test(event.key)) {
+                if (mask[currentLength] == '1') {
+                    this.value = currentString + event.key;
+                } else {
+                    for (let i = currentLength; i < mask.length; i++) {
+                        if (mask[i] == '1') {
+                            this.value = currentString + event.key;
+                            break;
+                        }
+                        currentString += mask[i];
+                    }
+                }
+            }
+        }
+    });
+}
+
+phoneMaskValid('#first-form input[name="phone"]');
+phoneMaskValid('#consultation input[name="phone"]');
+phoneMaskValid('#order input[name="phone"]');
