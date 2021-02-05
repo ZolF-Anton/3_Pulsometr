@@ -48,6 +48,7 @@ $(document).ready(function () {
     }
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+    /////////////////
     //Modal Window
 
     $('[data-modal=consultation]').on('click', function () {
@@ -64,7 +65,9 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('fast');
         });
     });
-
+    ////////////////
+    ////Валидация формы
+    /////////////
     function valideForms(form) {
         $(form).validate({
             rules: {
@@ -88,10 +91,25 @@ $(document).ready(function () {
     valideForms('#first-form');
     valideForms('#consultation form');
     valideForms('#order form');
+    ///////////////////////////////
+    //////////Раблта PHP mailer'a
+    $('form').submit(function (e) {
+        e.preventDefault(); //отключение стандартного поведения браузера - отменяем его перезагрузку
+        $.ajax({
+            type: 'POST', // получить или отправить данные с сервера
+            url: 'mailer/smart.php',
+            data: $(this).serialize(),
+        }).done(function () {
+            //после выполнения PHP выполним ещё действие
+            $(this).find('input').val('');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
 });
-
+//////////////////////////////////
 /////////////Clear JS Phone mask
-
 //////////////////////////////////////////////////////////////////
 function phoneMaskValid(inputForms) {
     let phoneInput = document.querySelector(inputForms);
