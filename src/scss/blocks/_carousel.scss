@@ -1,12 +1,13 @@
 .carousel {
     padding: 81px 0px;
     &__inner {
-        max-width: 750px;
+        //max-width: 750px;
+        max-width: 75%;
 
         margin: 0 auto;
     }
-    &__img {
-        max-width: 90%;
+    &__img img {
+        max-width: 100%;
     }
     .slick-prev,
     .slick-next {

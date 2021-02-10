@@ -92,7 +92,7 @@ $(document).ready(function () {
     valideForms('#consultation form');
     valideForms('#order form');
     ///////////////////////////////
-    //////////Раблта PHP mailer'a
+    //////////Рабoта PHP mailer'a
     $('form').submit(function (e) {
         e.preventDefault(); //отключение стандартного поведения браузера - отменяем его перезагрузку
         $.ajax({
@@ -102,12 +102,31 @@ $(document).ready(function () {
         }).done(function () {
             //после выполнения PHP выполним ещё действие
             $(this).find('input').val('');
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #tnx').fadeIn('slow');
 
             $('form').trigger('reset');
         });
         return false;
     });
+
+    /////Smooth scroll&pageUp
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageUp').fadeIn('fast');
+        } else {
+            $('.pageUp').fadeOut('slow');
+        }
+    });
+    ////Scroll
+    $("a[href^='#']").click(function () {
+        const _href = $(this).attr('href');
+        $('html, body').animate({ scrollTop: $(_href).offset().top + 'px' });
+        return false;
+    });
 });
+
 //////////////////////////////////
 /////////////Clear JS Phone mask
 //////////////////////////////////////////////////////////////////

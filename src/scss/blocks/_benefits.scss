@@ -28,4 +28,28 @@
         font-weight: 300;
         color: #0d0d0d;
     }
+    &_hbeat {
+        &:hover {
+            animation-name: heartbeat;
+            animation-duration: 1.3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    }
+    &_run {
+        &:hover {
+            animation-name: run;
+            animation-duration: 1.7s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+    }
+    &_cup {
+        &:hover {
+            animation-name: cup;
+            animation-duration: 1.7s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+        }
+    }
 }

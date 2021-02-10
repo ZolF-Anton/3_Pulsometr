@@ -17,6 +17,10 @@
         <meta name="msapplication-config" content="/src/icon/SOCIAL/browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />
         <!-- End -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
         <link rel="stylesheet" href="css/font.css" />
         <link rel="stylesheet" type="text/css" href="css/slick.css" />
@@ -32,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <section class="promo">
+        <section id="up" class="promo">
             <div class="container">
                 <header class="header">
                     <a href="#" class="header__logo">
@@ -48,7 +52,9 @@
                     </div>
                 </header>
                 <div class="promo__wrapper">
-                    <h1 class="promo__header">Подбор пульсометра</h1>
+                    <h1 class="animate__animated animate__pulse promo__header">
+                        Подбор пульсометра
+                    </h1>
                     <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
                     <div class="promo__icons">
                         <div class="promo__icon">
@@ -69,7 +75,7 @@
                     </button>
                     <div class="promo__link">
                         или
-                        <a href="#">перейти в каталог</a>
+                        <a href="#cat-a-log">перейти в каталог</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +87,7 @@
                     <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
                     <div class="benefits__wrapper">
                         <div class="benefits__clue">
-                            <img src="icon/red/1_cup_73.png" alt="" />
+                            <img src="icon/red/1_cup_73.png" alt="cup" class="benefits__clue_cup" />
                             <div class="benefits__clue__header">Делимся опытом</div>
                             <div class="benefits__clue__text">
                                 Наши сотрудники всегда готовы поделиться своим опытом, так как сами
@@ -90,7 +96,11 @@
                             </div>
                         </div>
                         <div class="benefits__clue">
-                            <img src="icon/red/2_heart_72.png" alt="" />
+                            <img
+                                src="icon/red/2_heart_72.png"
+                                alt="heart"
+                                class="benefits__clue_hbeat"
+                            />
                             <div class="benefits__clue__header">Заботимся о здоровье</div>
                             <div class="benefits__clue__text">
                                 Мы работаем для того, чтобы Ваши занятия спортом шли на пользу
@@ -98,7 +108,11 @@
                             </div>
                         </div>
                         <div class="benefits__clue">
-                            <img src="icon/red/3_shoe_71.png" alt="" />
+                            <img
+                                src="icon/red/3_shoe_71.png"
+                                alt="shoe"
+                                class="benefits__clue_run"
+                            />
                             <div class="benefits__clue__header">Учим бегать</div>
                             <div class="benefits__clue__text">
                                 Помогаем с обучением правильной технике бега! Дружим с крупнейшей
@@ -147,7 +161,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog">
+        <section id="cat-a-log" class="catalog">
             <div class="container">
                 <h2 class="title">Каталог пульсометров</h2>
 
@@ -671,6 +685,7 @@
                 <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
             </div>
         </div>
+        <a href="#up" class="pageUp"><img src="icon/chevron.svg" alt="Up" /></a>
 
         <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
         <!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
