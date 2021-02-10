@@ -51,3 +51,5 @@ src/!XLAM/*
 # Например /images/h4/user.jpg, /images/h/company.jpeg
 #/images/h?/*.jp?g
 
+package-lock.json
+.gitignore
