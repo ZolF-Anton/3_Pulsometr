@@ -1,3 +1,9 @@
+//Libs must be the 1st, before any other scss
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/animate.min';
+@import 'libs/slick';
+@import 'libs/font';
+//MAIN
 @import 'base/variables';
 @import 'base/animation';
 @import 'blocks/promo';

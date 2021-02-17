@@ -34,4 +34,7 @@
         flex-direction: column;
         align-items: flex-end;
     }
+    &_disabled {
+        display: none;
+    }
 }
